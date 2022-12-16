@@ -11,8 +11,9 @@ This project uses Expo Go to make development simpler.
 
 Download the [Expo Go application](https://expo.dev/expo-go) on your mobile device.
 
-Then, start the server with the following command:
+Then, run the following commands:
 ```
+$ npm install
 $ npx expo start
 ```
 
