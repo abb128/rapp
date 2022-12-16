@@ -12,141 +12,14 @@ const SpaceItem = ({ title, icon }) => {
 }
 
 const SpaceList = () => {
-    const space_data = [
-        {
-            title: "SampleSpace",
+    let spaceData = [];
+
+    for(let i=0; i<80; i++){
+        spaceData.push({
+            title: i.toString() + "_space",
             icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-        {
-            title: "SampleSpace",
-            icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-        {
-            title: "SampleSpace",
-            icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-        {
-            title: "SampleSpace",
-            icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-        {
-            title: "SampleSpace",
-            icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-        {
-            title: "SampleSpace",
-            icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-        {
-            title: "SampleSpace",
-            icon: undefined
-        },
-        {
-            title: "bab",
-            icon: undefined
-        },
-        {
-            title: "Louis Rossmann",
-            icon: undefined
-        },
-        {
-            title: "FlatHub",
-            icon: undefined
-        },
-    ];
+        });
+    }
 
     const renderItem = ({ item }) => {
         return <SpaceItem title={item.title} icon={item.icon} />
@@ -154,7 +27,7 @@ const SpaceList = () => {
 
     return <View style={styles.spaces}>
         <FlatList
-            data={space_data}
+            data={spaceData}
             renderItem={renderItem}
             showsVerticalScrollIndicator={false}
         />
@@ -177,14 +50,15 @@ const Channel = ({title}) => {
 }
 
 const RoomList = () => {
-    const room_data = [
-        {title: "announcements"},
-        {title: "help"},
-        {title: "general"},
-        {title: "test"},
-        {title: "bababooey"},
-        {title: "transportation"},
+    let roomData = [
+        "announcements", "general", "test"
     ];
+
+    for(let i=0; i<80; i++){
+        roomData.push("example" + i.toString());
+    }
+
+    roomData = roomData.map((v) => {return {title: v}});
 
     const renderItem = ({ item }) => {
         return <Channel title={item.title} />
@@ -192,7 +66,7 @@ const RoomList = () => {
 
     return <View style={styles.channels}>
         <FlatList
-            data={room_data}
+            data={roomData}
             renderItem={renderItem}
             showsVerticalScrollIndicator={false}
         />

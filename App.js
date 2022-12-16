@@ -39,7 +39,7 @@ export default function App() {
 
   const panResponder = useRef(
     PanResponder.create({
-      onMoveShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponder: (_, gs) => Math.abs(gs.dx) > 8,
       onPanResponderMove: Animated.event(
         [
           null,
