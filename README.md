@@ -1,20 +1,23 @@
-This is a test project I created to learn more about React Native. It was meant to be a text messaging app with a similar design to Discord.
+# Rapp
 
-![Screenshot of the application](https://github.com/abb128/rapp/blob/main/screenshot1.png?raw=true)
+Este é um projeto de teste que criei para aprender mais sobre Rust. Foi destinado a ser um aplicativo de mensagens de texto com um design semelhante ao Discord.
 
-![Screenshot of the application](https://github.com/abb128/rapp/blob/main/screenshot2.png?raw=true)
+![Screenshot da aplicação](https://github.com/abb128/rapp/blob/main/screenshot1.png?raw=true)
 
-It does not integrate with any back-end, so all of the data is fake.
+![Screenshot da aplicação](https://github.com/abb128/rapp/blob/main/screenshot2.png?raw=true)
 
-## Development
-This project uses Expo Go to make development simpler.
+Ele não integra com nenhum back-end, então todos os dados são falsos.
 
-Download the [Expo Go application](https://expo.dev/expo-go) on your mobile device.
+## Desenvolvimento
 
-Then, run the following commands:
+Este projeto usa Rust para simplificar o desenvolvimento.
+
+Para começar, instale o Rust e o Cargo seguindo as instruções em [rust-lang.org](https://www.rust-lang.org/).
+
+Em seguida, execute os seguintes comandos:
 ```
-$ npm install
-$ npx expo start
+$ cargo build
+$ cargo run
 ```
 
-Scan the QR code in the app and it should run the app.
+Isso deve iniciar o aplicativo.
